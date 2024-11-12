@@ -398,7 +398,7 @@ enum CountryCodeISO3166: Int {
         }
     }
     
-    func numericToAlpha2(numericCode: Int) -> String? {
+    static func numericToAlpha2(numericCode: Int) -> String? {
         guard let countryCode = CountryCodeISO3166(rawValue: numericCode) else {
             return nil
         }

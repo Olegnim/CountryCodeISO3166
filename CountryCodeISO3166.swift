@@ -600,11 +600,4 @@ enum CountryCodeISO3166: Int {
         case .zimbabwe: return "Зимбабве"
         }
     }
-    
-    static func numericToAlpha2(numericCode: Int) -> String? {
-        guard let countryCode = CountryCodeISO3166(rawValue: numericCode) else {
-            return nil
-        }
-        return countryCode.alpha2
-    }
 }

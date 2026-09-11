@@ -1,9 +1,22 @@
 # Пример использования
+
 ```
-if let alpha2Code = CountryCodeISO3166.numericToAlpha2(numericCode: 032) {
-    print("Alpha-2 code for 032: \(alpha2Code)") // AR is expected
-} else {
-    print("Code not found.")
+let country = CountryCodeISO3166(rawValue: AppConfiguration.shared.tenant?.countryCode ?? 1)?.alpha2 ?? ""
+// Вывод в формате: alpha2 = RU (пример)
+print("alpha2 = \(country)")
+```
+
+```
+private var friendlyCountry: Bool {
+    if let code = CountryCodeISO3166(rawValue: someCountryCode) {
+        switch code {
+        case .russia, .belarus, .kazakhstan, .china:
+            return true
+        default:
+            return false
+        }
+    }
+    return false
 }
 ```
 

@@ -1,6 +1,6 @@
 # Пример использования
 
-## Преобразует числовой код валюты (ISO 4217) в буквенный код (alpha-2)
+## Преобразует числовой код валюты (ISO 4217) в буквенный код (ISO 3166-1: alpha-2)
 ```
 let country = CountryCodeISO3166(rawValue: AppConfiguration.shared.tenant?.countryCode ?? 1)?.alpha2 ?? ""
 // Вывод в формате: alpha2 = RU (пример)
